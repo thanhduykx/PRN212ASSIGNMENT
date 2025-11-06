@@ -15,13 +15,13 @@ namespace Service.Services
         private readonly string _apiKey;
         private readonly EVSDbContext _dbContext;
 
-        public AIService(HttpClient httpClient, ILogger<AIService> logger, EVSDbContext dbContext)
+        public AIService(HttpClient httpClient,, IConfiguration configuration, ILogger<AIService> logger, EVSDbContext dbContext)
         {
             _httpClient = httpClient;
             _logger = logger;
             _dbContext = dbContext;
 
-            _apiKey = "";
+                        _apiKey = configuration["Gemini:ApiKey"] ?? throw new ArgumentNullException("Gemini:ApiKey missing");
             _httpClient.BaseAddress = new Uri("https://generativelanguage.googleapis.com/v1/");
         }
 
