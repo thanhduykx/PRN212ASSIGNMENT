@@ -1,0 +1,1252 @@
+[
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.AIController",
+    "Method": "AnalyzeData",
+    "RelativePath": "api/AI/analyze",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.AIController",
+    "Method": "AnalyzeCarUsage",
+    "RelativePath": "api/AI/car-usage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.AuthController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/Auth/confirm-email",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.AuthController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Auth/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EVStation_basedRentalSystem.Controllers.ForgotPasswordModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Repository.Entities.Model.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Repository.Entities.Model.RegisterModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EVStation_basedRentalSystem.Controllers.ResetPasswordModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarController",
+    "Method": "GetAll",
+    "RelativePath": "api/Car",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarController",
+    "Method": "Create",
+    "RelativePath": "api/Car",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "car",
+        "Type": "Repository.Entities.Car",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarController",
+    "Method": "Update",
+    "RelativePath": "api/Car/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "car",
+        "Type": "Repository.Entities.Car",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarController",
+    "Method": "Delete",
+    "RelativePath": "api/Car/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarController",
+    "Method": "GetByName",
+    "RelativePath": "api/Car/byName/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarController",
+    "Method": "GetPaged",
+    "RelativePath": "api/Car/paged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarController",
+    "Method": "GetTopRentedCars",
+    "RelativePath": "api/Car/TopRented",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "topCount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarDeliveryHistoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/CarDeliveryHistory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarDeliveryHistoryController",
+    "Method": "Create",
+    "RelativePath": "api/CarDeliveryHistory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Service.DTOs.CarDeliveryHistoryCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarDeliveryHistoryController",
+    "Method": "GetById",
+    "RelativePath": "api/CarDeliveryHistory/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarDeliveryHistoryController",
+    "Method": "Update",
+    "RelativePath": "api/CarDeliveryHistory/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Service.DTOs.CarDeliveryHistoryUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarDeliveryHistoryController",
+    "Method": "Delete",
+    "RelativePath": "api/CarDeliveryHistory/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarRentalLocationController",
+    "Method": "Delete",
+    "RelativePath": "api/CarRentalLocation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarRentalLocationController",
+    "Method": "Create",
+    "RelativePath": "api/CarRentalLocation/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carRentalLocationDTO",
+        "Type": "Service.DTOs.CreateCarRentalLocationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarRentalLocationController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/CarRentalLocation/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarRentalLocationController",
+    "Method": "GetByCarId",
+    "RelativePath": "api/CarRentalLocation/GetByCarId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarRentalLocationController",
+    "Method": "GetById",
+    "RelativePath": "api/CarRentalLocation/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarRentalLocationController",
+    "Method": "GetByLocationId",
+    "RelativePath": "api/CarRentalLocation/GetByRentalLocationId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locationId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarRentalLocationController",
+    "Method": "Update",
+    "RelativePath": "api/CarRentalLocation/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carRentalLocationDTO",
+        "Type": "Service.DTOs.UpdateCarRentalLocationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarReturnHistoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/CarReturnHistory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarReturnHistoryController",
+    "Method": "Create",
+    "RelativePath": "api/CarReturnHistory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Service.DTOs.CarReturnHistoryCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarReturnHistoryController",
+    "Method": "GetById",
+    "RelativePath": "api/CarReturnHistory/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarReturnHistoryController",
+    "Method": "Update",
+    "RelativePath": "api/CarReturnHistory/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Service.DTOs.CarReturnHistoryCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CarReturnHistoryController",
+    "Method": "Delete",
+    "RelativePath": "api/CarReturnHistory/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CitizenIdController",
+    "Method": "Create",
+    "RelativePath": "api/CitizenId/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createCitizenIdDTO",
+        "Type": "Service.DTOs.CreateCitizenIdDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CitizenIdController",
+    "Method": "GetAllCitizenIds",
+    "RelativePath": "api/CitizenId/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CitizenIdController",
+    "Method": "GetById",
+    "RelativePath": "api/CitizenId/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CitizenIdController",
+    "Method": "GetByOrderId",
+    "RelativePath": "api/CitizenId/GetByOrderId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CitizenIdController",
+    "Method": "UpdateInfo",
+    "RelativePath": "api/CitizenId/UpdateCitizenIdInfo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateCitizenIdInfoDTO",
+        "Type": "Service.DTOs.UpdateCitizenIdInfoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.CitizenIdController",
+    "Method": "UpdateStatus",
+    "RelativePath": "api/CitizenId/UpdateCitizenIdStatus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CitizenIdId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.DriverLicenseController",
+    "Method": "Create",
+    "RelativePath": "api/DriverLicense/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDriverLicenseDTO",
+        "Type": "Service.DTOs.CreateDriverLicenseDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.DriverLicenseController",
+    "Method": "GetAllDriverLicenses",
+    "RelativePath": "api/DriverLicense/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.DriverLicenseController",
+    "Method": "GetById",
+    "RelativePath": "api/DriverLicense/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.DriverLicenseController",
+    "Method": "GetByOrderId",
+    "RelativePath": "api/DriverLicense/GetByOrderId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.DriverLicenseController",
+    "Method": "UpdateInfo",
+    "RelativePath": "api/DriverLicense/UpdateDriverLicenseInfo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LicenseNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageUrl2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.DriverLicenseController",
+    "Method": "UpdateStatus",
+    "RelativePath": "api/DriverLicense/UpdateDriverLicenseStatus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DriverLicenseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.FeedbackController",
+    "Method": "GetAll",
+    "RelativePath": "api/Feedback",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.FeedbackController",
+    "Method": "Create",
+    "RelativePath": "api/Feedback",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fb",
+        "Type": "Repository.Entities.Feedback",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.FeedbackController",
+    "Method": "Update",
+    "RelativePath": "api/Feedback/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "fb",
+        "Type": "Repository.Entities.Feedback",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.FeedbackController",
+    "Method": "Delete",
+    "RelativePath": "api/Feedback/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.FeedbackController",
+    "Method": "GetByCarName",
+    "RelativePath": "api/Feedback/byCar/{carName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.FeedbackController",
+    "Method": "GetPaged",
+    "RelativePath": "api/Feedback/paged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.PaymentController",
+    "Method": "Create",
+    "RelativePath": "api/Payment/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPaymentDTO",
+        "Type": "Service.DTOs.CreatePaymentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.PaymentController",
+    "Method": "GetAllPayment",
+    "RelativePath": "api/Payment/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.PaymentController",
+    "Method": "GetAllCustomerPayment",
+    "RelativePath": "api/Payment/GetAllByUserId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.PaymentController",
+    "Method": "GetById",
+    "RelativePath": "api/Payment/GetByPaymentId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.PaymentController",
+    "Method": "Update",
+    "RelativePath": "api/Payment/UpdatePaymentStatus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePaymentStatusDTO",
+        "Type": "Service.DTOs.UpdatePaymentStatusDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalContactController",
+    "Method": "GetAll",
+    "RelativePath": "api/RentalContact",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalContactController",
+    "Method": "Create",
+    "RelativePath": "api/RentalContact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Service.DTOs.RentalContactCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalContactController",
+    "Method": "Update",
+    "RelativePath": "api/RentalContact",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Service.DTOs.RentalContactUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalContactController",
+    "Method": "Delete",
+    "RelativePath": "api/RentalContact/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalContactController",
+    "Method": "GetByRentalOrderId",
+    "RelativePath": "api/RentalContact/byRentalOrder/{rentalOrderId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rentalOrderId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalLocationController",
+    "Method": "Delete",
+    "RelativePath": "api/RentalLocation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalLocationController",
+    "Method": "Create",
+    "RelativePath": "api/RentalLocation/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createRentalLocationDTO",
+        "Type": "Service.DTOs.CreateRentalLocationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalLocationController",
+    "Method": "GetAllAsync",
+    "RelativePath": "api/RentalLocation/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalLocationController",
+    "Method": "GetAllStaffByLocationId",
+    "RelativePath": "api/RentalLocation/GetAllStaffByLocationId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locationId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalLocationController",
+    "Method": "GetById",
+    "RelativePath": "api/RentalLocation/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalLocationController",
+    "Method": "Update",
+    "RelativePath": "api/RentalLocation/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateRentalLocationDTO",
+        "Type": "Service.DTOs.UpdateRentalLocationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalOrderController",
+    "Method": "Create",
+    "RelativePath": "api/RentalOrder/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createRentalOrderDTO",
+        "Type": "Service.DTOs.CreateRentalOrderDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalOrderController",
+    "Method": "GetAll",
+    "RelativePath": "api/RentalOrder/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalOrderController",
+    "Method": "GetById",
+    "RelativePath": "api/RentalOrder/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalOrderController",
+    "Method": "GetByUserId",
+    "RelativePath": "api/RentalOrder/GetByUserId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalOrderController",
+    "Method": "UpdateStatus",
+    "RelativePath": "api/RentalOrder/UpdateStatus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "OrderId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.RentalOrderController",
+    "Method": "UpdateTotal",
+    "RelativePath": "api/RentalOrder/UpdateTotal",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateRentalOrderTotalDTO",
+        "Type": "Service.DTOs.UpdateRentalOrderTotalDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.UserController",
+    "Method": "Update",
+    "RelativePath": "api/User",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateUserDTO",
+        "Type": "Service.DTOs.UpdateUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.UserController",
+    "Method": "Delete",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.UserController",
+    "Method": "CreateStaff",
+    "RelativePath": "api/User/CreateStaff",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "staffUserDTO",
+        "Type": "Service.DTOs.CreateStaffUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.UserController",
+    "Method": "GetAllUser",
+    "RelativePath": "api/User/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.UserController",
+    "Method": "GetById",
+    "RelativePath": "api/User/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.UserController",
+    "Method": "UpdateCustomerName",
+    "RelativePath": "api/User/UpdateCustomerName",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateUserDTO",
+        "Type": "Service.DTOs.UpdateCustomerNameDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EVStation_basedRentalSystem.Controllers.UserController",
+    "Method": "UpdateCustomerPassword",
+    "RelativePath": "api/User/UpdateCustomerPassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateUserDTO",
+        "Type": "Service.DTOs.UpdateCustomerPasswordDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
